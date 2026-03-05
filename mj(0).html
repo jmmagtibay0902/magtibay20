@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>John Michael Magtibay | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(135deg, red, blue);
+    color:white;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-weight:bold;
+    font-size:20px;
+}
+
+#menu-toggle{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.nav-menu{
+    list-style:none;
+    display:flex;
+}
+
+.nav-menu li{
+    margin-left:25px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-menu a:hover{
+    color:yellow;
+}
+
+/* SECTION STYLE */
+section{
+    padding:120px 20px 80px;
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+section h1{
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* ABOUT */
+.profile-img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:20px 0;
+    border:4px solid white;
+}
+
+.skills{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.skills li{
+    background:rgba(0,0,0,0.5);
+    padding:10px 20px;
+    margin:10px;
+    border-radius:20px;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.gallery-item{
+    height:220px;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.gallery-item img:hover{
+    transform:scale(1.1);
+}
+
+/* SOCIAL MEDIA */
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    padding:12px 25px;
+    background:rgba(0,0,0,0.6);
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    background:white;
+    color:black;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.7);
+    margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .menu-icon{
+        display:block;
+    }
+
+    .nav-menu{
+        position:absolute;
+        top:60px;
+        right:0;
+        background:black;
+        flex-direction:column;
+        width:200px;
+        display:none;
+        text-align:center;
+        padding:15px 0;
+    }
+
+    .nav-menu li{
+        margin:15px 0;
+    }
+
+    #menu-toggle:checked ~ .nav-menu{
+        display:flex;
+    }
+
+    section{
+        padding:100px 15px 60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+    <div class="logo">JM Portfolio</div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#social">Social</a></li>
+    </ul>
+
+</nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <h1>Welcome to My Digital Portfolio</h1>
+    <p>This website showcases my personal info,contact,and gallery.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>About Me</h1>
+    <img src="profilepic.jpeg" class="profile-img" alt="Profile Photo">
+
+    <p>Hello! My name is John Michael Magtibay. I am student learning web developing and design.</p>
+
+    <ul class="skills">
+        <li>Learning</li>
+        <li>Studying</li>
+        <li>Designing</li>
+        <li>Playing</li>
+    </ul>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h1>My Gallery</h1>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="FB_IMG_1772531126199.jpg" alt=""></div>
+        <div class="gallery-item"><img src="FB_IMG_1772531062375.jpg" alt=""></div>
+        <div class="gallery-item"><img src="FB_IMG_1772531035341.jpg" alt=""></div>
+        <div class="gallery-item"><img src="FB_IMG_1772530932412.jpg" alt=""></div>
+        <div class="gallery-item"><img src="received_874083702149200.jpeg" alt=""></div>
+        <div class="gallery-item"><img src="FB_IMG_1772624014895.jpg" alt=""></div>
+    </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="social">
+    <h1>Connect With Me</h1>
+
+    <div class="social-links">
+       <a href="https://www.facebook.com/share/1FgHWVDxxn/" target="_blank"><i class="fa fa-facebook"></i> John Michael Magtibay</a>
+        <a href="https://www.instagram.com/urbf.john02?igsh=bWJiaTNmbGR6cjQ1" target="_blank"><i class="fa fa-instagram"></i> urbf.john02</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 John Michael Magtibay</p>
+</footer>
+
+</body>
+</html>

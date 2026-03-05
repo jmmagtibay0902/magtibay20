@@ -1,0 +1,72 @@
+*{
+    animation: slide 2s ease-in;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #222;
+    padding: 10px;
+    background color: aqua;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: blue;
+    text-decoration: none;
+}
+
+.nav-menu .active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: blue;
+    margin-top: 40px;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 70px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: darkblue;
+    color: blue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* CONTENT AREA */
+.content {
+
+
